@@ -4,79 +4,60 @@ public class Main {
 
     public static void main(String[] args) {
 
-        int zmiennaInt = 1;
-        System.out.println("zmienna int = " + zmiennaInt);
-        /* ćw.2 */
+        /* ćw.3 */
 
-        /*   zad.1 zadeklaruj i zainicjalizuj zmienne różnych typów i wyświetl w konsoli (im więcej tym lepiej ;) ) */
+        /*  zad.1 napisać interfejs który bedzie słuzył do wpisania danych osobowych:
+         *   a) Imię, nazwisko, wiek, nr indeksu,
+         *   dane mają być wprowadzane z klawiatury w konsoli
+         *   b) wyświetlić dane za pomocą println i printf
+         */
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Podaj Imię: ");
+        String imie = scan.next();
 
-        byte zmiennaByte = 22;
-        System.out.println("zmienna byte = " + zmiennaByte);
+        System.out.print("Podaj Nazwisko: ");
+        String nazwisko = scan.next();
 
-        short zmiennaShort = 3;
-        System.out.println("zmienna short = " + zmiennaShort);
+        System.out.print("Podaj wiek: ");
+        int wiek = scan.nextInt();
 
-        long zmiennaLong = 4;
-        System.out.println("zmienna long = " + zmiennaLong);
-
-        float zmiennaFloat = 5.55f;
-        System.out.println("zmienna float = " + zmiennaFloat);
-
-        boolean zmiennaBoolean = true;
-        System.out.println("zmienna boolean = " + zmiennaBoolean);
+        System.out.print("Podaj nr indeksu: ");
+        int nrIndeksu = scan.nextInt();
 
 
-        /*
-         *    zad.2 Napisz kod który będzie wykonywał operacje: dodawania, odejmowania,
-         *    mnożenia, dziealenia i modulo na zmiennych:
-        *    a) liczbaA i liczbaB, dowolne liczby calkowite (int),
-        *    b) liczbaX i liczbaY, dowolne liczby zmiennoprzecinkowe (double)
-         *  */
+        System.out.println("Twoje imie i nazwisko to  " + imie + " " + nazwisko + ". Masz  " + wiek + " lat. Twój nr indeksu to " + nrIndeksu);
+        System.out.printf("Twoje imie  to %s , zaś nazwisko to %s . ", imie, nazwisko);
+        System.out.printf("Twoj wiek to %d , a nr indeksu to %d . ", wiek, nrIndeksu);
 
-        int liczbaA = 22;
-        System.out.println("liczba A = " + liczbaA);
 
-        int liczbaB = 4;
-        System.out.println("liczba B = " + liczbaB);
-        
-        int wynik1 = liczbaA + liczbaB;
-        System.out.println("A+B = " + wynik1);
 
-        int wynik2 = liczbaB - liczbaA;
-        System.out.println("B-A = " + wynik2);
+        /*  zad.2 zadeklarować 2 zmienne typu int i wykonać na nich obliczenia arytmetyczn (+, -, *, /, %)
+         *   wynik wyświetlić w konsoli programu
+         */
 
-        int wynik3 = liczbaA - liczbaB;
-        System.out.println("A-B = " + wynik3);
 
-        int wynik4 = liczbaA * liczbaB;
-        System.out.println("A*B = " + wynik4);
+        System.out.print("Podaj dowolną liczbę: ");
+        int liczba1 = scan.nextInt();
 
-        int wynik5 = liczbaA / liczbaB;
-        System.out.println("A/B = " + wynik5);
+        System.out.print("Podaj drugą dowolną liczbę : ");
+        int liczba2 = scan.nextInt();
 
-        int wynik6 = liczbaB%liczbaA;
-        System.out.println("B%A = " + wynik6);
+        int wynik = liczba1 + liczba2;
+        System.out.println("liczba1 + liczba2 = " + wynik);
 
-        double liczbaX = 10.0000001;
-        System.out.println("liczba X = " + liczbaX);
+        int wynik1 = liczba1 - liczba2;
+        System.out.println("liczba1 - liczba2 = " + wynik1);
 
-        double liczbaY = 8.09;
-        System.out.println("liczba Y = " + liczbaY);
+        int wynik2 = liczba1 * liczba2;
+        System.out.println("liczba1 * liczba2 = " + wynik2);
 
-        double wynik7 = liczbaX + liczbaY;
-        System.out.println("X+Y = " + wynik7);
+        int wynik3 = liczba1 / liczba2;
+        System.out.println("liczba1 / liczba2 = " + wynik3);
 
-        double wynik8 = liczbaX - liczbaY;
-        System.out.println("X-Y = " + wynik8);
-
-        double wynik9 = liczbaX * liczbaY;
-        System.out.println("X*Y = " + wynik9);
-
-        double wynik10 = liczbaX / liczbaY;
-        System.out.println("X/Y = " + wynik10);
-
-        double wynik11 = liczbaX % liczbaY;
-        System.out.println("X%Y = " + wynik11);
+        int wynik4 = liczba1 % liczba2;
+        System.out.println("liczba1 % liczba2 = " + wynik4);
 
     }
+
+
 }
