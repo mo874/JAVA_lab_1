@@ -36,26 +36,17 @@ public class Main {
          *   wynik wyświetlić w konsoli programu
          */
 
-        System.out.print("Podaj dowolną liczbę: ");
+        System.out.print("Podaj dowolną liczbę całkowitą: ");
         int liczba1 = scan.nextInt();
 
-        System.out.print("Podaj drugą dowolną liczbę : ");
+        System.out.print("Podaj drugą dowolną liczbę całkowitą: ");
         int liczba2 = scan.nextInt();
 
-        int wynik = liczba1 + liczba2;
-        System.out.println("liczba1 + liczba2 = " + wynik);
-
-        int wynik1 = liczba1 - liczba2;
-        System.out.println("liczba1 - liczba2 = " + wynik1);
-
-        int wynik2 = liczba1 * liczba2;
-        System.out.println("liczba1 * liczba2 = " + wynik2);
-
-        int wynik3 = liczba1 / liczba2;
-        System.out.println("liczba1 / liczba2 = " + wynik3);
-
-        int wynik4 = liczba1 % liczba2;
-        System.out.println("liczba1 % liczba2 = " + wynik4);
+        System.out.println("Suma: " + liczba1 + " + " + liczba2 + " = " + (liczba1+liczba2));
+        System.out.println("Różnica: " + liczba1 + " - " + liczba2 + " = " + (liczba1-liczba2));
+        System.out.println("Iloczyn: " + liczba2 + " * " + liczba2 + " = " + (liczba1*liczba2));
+        System.out.println("Iloraz całkowity: " + liczba1 + " / " + liczba2 + " = " + (liczba1/liczba2));
+        System.out.println("Reszta z dzielenia: " + liczba1 + " % " + liczba2 + " = " + (liczba1%liczba2));
 
     }
 
