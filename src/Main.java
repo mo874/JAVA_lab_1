@@ -37,7 +37,6 @@ public class Main {
          *   wynik wyświetlić w konsoli programu
          */
 
-
         System.out.print("Podaj dowolną liczbę: ");
         int liczba1 = scan.nextInt();
 
