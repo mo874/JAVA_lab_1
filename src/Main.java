@@ -4,6 +4,7 @@ public class Main {
 
     public static void main(String[] args) {
 
+
         /* ćw.3 */
 
         /*  zad.1 napisać interfejs który bedzie słuzył do wpisania danych osobowych:
@@ -11,6 +12,7 @@ public class Main {
          *   dane mają być wprowadzane z klawiatury w konsoli
          *   b) wyświetlić dane za pomocą println i printf
          */
+
         Scanner scan = new Scanner(System.in);
         System.out.print("Podaj Imię: ");
         String imie = scan.next();
