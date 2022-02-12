@@ -1,39 +1,54 @@
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
 
     public static void main(String[] args) {
 
-        /* ćw.5 */
+        /* Tablice - cw_6 */
 
-        /* zad.1 podziel swój wiek przez modulo 3 i jeśli twój wiek zwraca 0 wyświetl napis "Podzielny przez 3",
-         * w innym wypadku "Niepodzielny przez 3" użyj kontrukcji if else
-         * */
+        /* zad1. stworzyć tablicę 5-cio elementową typu:
+        a) double[],
+        b) char[],
+        c) boolean[]
+        przypisać do niej wartości i wyświetlić za pomocą dowolnej pętli.
+        */
 
-        Scanner scan = new Scanner(System.in);
-        System.out.println("Podaj swoj wiek: ");
-        int wiek = scan.nextInt();
 
-        if (wiek % 3 == 0) {System.out.println("Podzielny przez 3");}
-            else {System.out.println("Niepodzielny przez 3");}
+        /*a) double[],*/
+        double[] tablica = new double[5];
+        for (int i = 0; i < tablica.length; i++) {
+            tablica[i] = i + 19;
+        }
+        for (int i = 0; i < tablica.length; i++) {
+            System.out.println("Element " + i + " to: " + tablica[i]);
+        }
 
-        /* zad.2 użyj parametru trójargumentowego aby sprawdzić parzystośc nr. indeksu */
 
-        System.out.println("Podaj swoj numer indeksu: ");
-        int indeks = scan.nextInt();
-        String parzystosc = ((indeks % 2) == 0) ? "parzysty" : "nieparzysty";
-        System.out.println(parzystosc);
 
-        /* zad.3 wpisz z klawiatury liczbę zmiennoprzecinkową (użyj klasy Scanner z poprzednich ćwiczeń)
-         * i stwórz konstrukcję else if z dowolnymi komunikatami */
+        /*b) char[],*/
+        char[] tablica1 = {'A','B','C','D','E'};
+        for (int i = 0; i<tablica1.length; i++) {
+            System.out.print(tablica1[i] + ",");
+        }
+        System.out.println();
 
-        System.out.println("Wpisz liczbe zmiennoprzecinkowa");
-        Double liczba = scan.nextDouble();
 
-        if (liczba < 0) {System.out.println("Podałeś liczbę poniżej zera");}
-            else if (liczba == 0) {System.out.println("Podałeś liczbę równą zero");}
-            else if (liczba < 50.505050) {System.out.println("Podałeś liczbę powyżej zera jednak poniżej liczby 50,505050");}
-            else {System.out.println("Podałeś liczbę większą lub równą 50,505050");}
+
+
+        /*c) boolean[]*/
+       boolean[] tablica2 = new boolean [5];
+        for(int i = 0; i< tablica2.length; i++){
+            if(i%2==0){
+                tablica2[i] = true;
+                System.out.println("Tablica nr["+ i + "] = wartość w tablicy: " + tablica2 [i] +"  True");
+            }
+            else{
+                tablica2[i] = false;
+                System.out.println("Tablica nr["+ i + "] = wartość w tablicy: " + tablica2 [i] +"  False");
+            }
+        }
+
 
     }
 }
