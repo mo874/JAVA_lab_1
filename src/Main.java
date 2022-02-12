@@ -4,67 +4,36 @@ public class Main {
 
     public static void main(String[] args) {
 
-        /* ćw.4 */
+        /* ćw.5 */
 
-        /* zad.1 proszę dodać kilka złożonych operacji uzywając kilku operatorów arytmetycznych i logicznych */
-
-        /* Operatory logiczne */
-        /*operatory logiczne, czyli koniunkcja && ("i") i alternatywa || ("lub").
-        Koniunkcja w wyniku daje true tylko wtedy, gdy oba warunki, które nią łączymy są prawdą,
-        natomiast alternatywa daje false tylko wtedy, gdy oba warunki będą false.
-        ! to zaprzeczenie - NOT
-        */
-
-        boolean a = true;
-        boolean b = true;
-        boolean c = false;
-        System.out.println("Operatory arytmetyczne:" + "\na = true\tb = true\tc = false");
+        /* zad.1 podziel swój wiek przez modulo 3 i jeśli twój wiek zwraca 0 wyświetl napis "Podzielny przez 3",
+         * w innym wypadku "Niepodzielny przez 3" użyj kontrukcji if else
+         * */
 
         Scanner scan = new Scanner(System.in);
-        System.out.println("Podaj wartosc ponizszych wyrazen logicznych wpisujac true lub false:");
+        System.out.println("Podaj swoj wiek: ");
+        int wiek = scan.nextInt();
 
-        System.out.println("(a && b) : " + (a && b)); // true
-        String odpowiedz = scan.next();
-        if (odpowiedz.equals("true")) System.out.println("Poprawnie");
-        else System.out.println("Błędna odpowiedz");
+        if (wiek % 3 == 0) {System.out.println("Podzielny przez 3");}
+            else {System.out.println("Niepodzielny przez 3");}
 
-        System.out.println("(a || b) : " + (a || b)); // true
-        String odpowiedz2= scan.next();
-        if (odpowiedz2.equals("true")) System.out.println("Poprawnie");
-        else System.out.println("Błędna odpowiedz");
+        /* zad.2 użyj parametru trójargumentowego aby sprawdzić parzystośc nr. indeksu */
 
-        System.out.println("!b : " + !b); // false
-        String odpowiedz3 = scan.next();
-        if (odpowiedz3.equals("true")) System.out.println("Błędna odpowiedz");
-        else System.out.println("Poprawnie");
+        System.out.println("Podaj swoj numer indeksu: ");
+        int indeks = scan.nextInt();
+        String parzystosc = ((indeks % 2) == 0) ? "parzysty" : "nieparzysty";
+        System.out.println(parzystosc);
 
-        System.out.println("!((a && c) || (!a || b) : " + !((a && c) || (!a || b))); // true
-        String odpowiedz4 = scan.next();
-        if (odpowiedz4.equals("true")) System.out.println("Poprawnie");
-        else System.out.println("Błędna odpowiedz");
+        /* zad.3 wpisz z klawiatury liczbę zmiennoprzecinkową (użyj klasy Scanner z poprzednich ćwiczeń)
+         * i stwórz konstrukcję else if z dowolnymi komunikatami */
 
+        System.out.println("Wpisz liczbe zmiennoprzecinkowa");
+        Double liczba = scan.nextDouble();
 
-        /* Operatory porównania */
-        /*
-        == sprawdza równość wartości.
-        != różny.
-        >= większy, bądź równy.
-        <= mniejszy, bądź równy.
-        > większy.
-        < mniejszy.
-        */
-
-        int x = 4;
-        int y = 5;
-        int z = 10;
-
-        System.out.printf("Operatory porównania:" + "\nx = %d\ty = %d\tz = %d\n", x, y, z);
-        System.out.print("\n\nOdpowiedzi: \n");
-
-        System.out.println("(x == z) : " + (x == z)); // false
-        System.out.println("(x != y) : " + (x != y)); // true
-        System.out.println("(x < y) : " + (x < y)); // true
-        System.out.println("((x > y) || (a && c)) : " + ((x > y) || (a && c))); // false
+        if (liczba < 0) {System.out.println("Podałeś liczbę poniżej zera");}
+            else if (liczba == 0) {System.out.println("Podałeś liczbę równą zero");}
+            else if (liczba < 50.505050) {System.out.println("Podałeś liczbę powyżej zera jednak poniżej liczby 50,505050");}
+            else {System.out.println("Podałeś liczbę większą lub równą 50,505050");}
 
     }
 }
