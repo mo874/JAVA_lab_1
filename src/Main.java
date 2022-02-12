@@ -32,7 +32,6 @@ public class Main {
         System.out.printf("Twoj wiek to %d , a nr indeksu to %d . ", wiek, nrIndeksu);
 
 
-
         /*  zad.2 zadeklarować 2 zmienne typu int i wykonać na nich obliczenia arytmetyczn (+, -, *, /, %)
          *   wynik wyświetlić w konsoli programu
          */
